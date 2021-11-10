@@ -471,4 +471,56 @@
 }
 #main-image-section .main-image-box .mainImg-wrap .mainImg.img4 {
   background-image: url(../img/mainimg4.jpg);
+}
+
+#media-section .media-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+#media-section .media-content .title-box {
+  width: 100%;
+}
+#media-section .media-content .title-box h2 {
+  display: inline-block;
+  font-size: 60px;
+  color: #000;
+  position: relative;
+}
+#media-section .media-content .title-box h2::after {
+  display: block;
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #bb0841;
+}
+#media-section .media-content .top-media-box {
+  width: 900px;
+  margin: 0 auto;
+}
+#media-section .media-content .top-media-box ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#media-section .media-content .top-media-box ul li {
+  width: 49%;
+}
+#media-section .media-content .top-media-box ul li a {
+  display: block;
+  width: 100%;
+}
+#media-section .media-content .top-media-box ul li a img {
+  display: block;
+  width: 100%;
+}
+#media-section .media-content .bottom-news-box .news-wrap {
+  width: 900px;
+}
+#media-section .media-content .bottom-news-box .news-wrap li a {
+  display: block;
 }/*# sourceMappingURL=lgstyle.min.css.map */

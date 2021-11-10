@@ -61,7 +61,6 @@ $(document).ready(function () {
 		mainImg.css({ zIndex: 1 });
 		mainImg.eq(cnt == 0 ? 3 : cnt - 1).css({ zIndex: 3 });
 		mainImg.eq(cnt).css({ zIndex: 4 }).stop().animate({ opacity: 0 }, 0).animate({ opacity: 1 }, 1000);
-		console.log(cnt);
 	}
 	function countFn() {
 		cnt++;
@@ -75,4 +74,22 @@ $(document).ready(function () {
 		setInterval(countFn, 4000);
 	}
 	autoPlay();
+
+	///미디어
+
+	var swiper = new Swiper(".swiper", {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		slidesPerGroup: 3,
+		loop: true,
+		loopFillGroupWithBlank: true,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
 });
