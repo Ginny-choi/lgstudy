@@ -6,6 +6,7 @@
 .container {
   width: calc(100% - 200px);
   margin: 0 auto;
+  height: 100%;
 }
 @media all and (max-width: 1025px) {
   .container {
@@ -21,7 +22,7 @@
   z-index: 3;
   position: fixed;
   width: 100%;
-  border-bottom: 1px solid #000;
+  background: #fff;
 }
 #header .header {
   display: flex;
@@ -426,4 +427,48 @@
   display: block;
   padding: 15px 0;
   border-bottom: 1px solid #dbdbdb;
+}
+
+#main {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+}
+
+#main-image-section {
+  padding-top: 100px;
+  height: 100vh;
+}
+#main-image-section .main-image-box {
+  height: 100%;
+  background: #000;
+}
+#main-image-section .main-image-box .mainImg-wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#main-image-section .main-image-box .mainImg-wrap .mainImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/mainimg1.jpg) no-repeat center;
+  background-size: cover;
+}
+#main-image-section .main-image-box .mainImg-wrap .mainImg.img1 {
+  z-index: 4;
+}
+#main-image-section .main-image-box .mainImg-wrap .mainImg.img1 {
+  background-image: url(../img/mainimg1.jpg);
+}
+#main-image-section .main-image-box .mainImg-wrap .mainImg.img2 {
+  background-image: url(../img/mainimg2.jpg);
+}
+#main-image-section .main-image-box .mainImg-wrap .mainImg.img3 {
+  background-image: url(../img/mainimg3.jpg);
+}
+#main-image-section .main-image-box .mainImg-wrap .mainImg.img4 {
+  background-image: url(../img/mainimg4.jpg);
 }/*# sourceMappingURL=lgstyle.min.css.map */
