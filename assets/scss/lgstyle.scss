@@ -187,14 +187,20 @@
 			}
 		}
 		.translate-box {
+			// width: 118px;
+			flex-shrink: 0;
+			@media all and (max-width: 1025px) {
+				width: auto;
+				flex-shrink: 1;
+			}
 			ul {
 				display: flex;
 				align-items: center;
 				li {
-					padding: 0 20px;
 					position: relative;
 
 					&:nth-child(1) {
+						padding-right: 20px;
 						&::after {
 							display: block;
 							content: "";
@@ -212,26 +218,45 @@
 					}
 
 					&:nth-child(2) {
-						padding-right: 0;
+						padding-left: 20px;
+
 						@media all and (max-width: 1025px) {
 							padding: 0;
 						}
 					}
-					.language {
-						display: block;
-						font-size: 15px;
-						padding: 0;
-						background: transparent;
+					.btn-wrap {
+						&.on {
+							border: 1px solid #dbdbdb;
+							padding: 10px;
 
-						&::after {
-							display: inline-block;
-							content: "";
-							background: url(../img/sprite_pc.png) no-repeat;
-							width: 12px;
-							height: 8px;
-							background-position: -191px -388px;
-							background-size: 461px 445px;
-							margin-left: 5px;
+							.eng {
+								display: block;
+							}
+						}
+						.language {
+							display: block;
+							font-size: 15px;
+							padding: 0;
+							background: transparent;
+							cursor: pointer;
+
+							&::after {
+								display: inline-block;
+								content: "";
+								background: url(../img/sprite_pc.png) no-repeat;
+								width: 12px;
+								height: 8px;
+								background-position: -191px -388px;
+								background-size: 461px 445px;
+								margin-left: 5px;
+							}
+						}
+						.eng {
+							display: none;
+							padding-top: 5px;
+							&::after {
+								display: none;
+							}
 						}
 					}
 					.link-btn {
@@ -262,6 +287,8 @@
 		width: 100%;
 		height: 100vh;
 		background: #fff;
+		overflow-y: scroll;
+		display: none;
 
 		.top-logo-box {
 			padding: 15px;
@@ -295,6 +322,7 @@
 							background: transparent;
 							font-size: 14px;
 							font-weight: 600;
+							cursor: pointer;
 
 							&::after {
 								display: inline-block;
@@ -311,6 +339,7 @@
 							display: block;
 							width: 20px;
 							height: 20px;
+							font-size: 0;
 							background: url(../img/sprite_mobile@2x.png) no-repeat;
 							background-size: 379px 340px;
 							background-position: -38px -283px;
@@ -337,16 +366,64 @@
 		.bottom-gnb-box {
 			width: 100%;
 
-			ul {
-				li {
+			> ul {
+				> li {
 					border-top: 1px solid #dbdbdb;
-					text-indent: 20px;
-					padding: 18px 0;
 
 					.mobile-gnbBtn {
+						display: block;
+						position: relative;
+						width: 100%;
+						padding: 18px 0;
 						font-size: 17px;
 						font-weight: 500;
+						text-indent: 20px;
 						color: #000;
+
+						&.active {
+							background: #bb0841;
+							color: #fff;
+
+							&::after {
+								background-position: -259px -285px;
+								background-size: 379px 340px;
+							}
+						}
+
+						&::after {
+							display: block;
+							content: "";
+							position: absolute;
+							top: 50%;
+							right: 20px;
+							transform: translateY(-50%);
+							width: 17px;
+							height: 10px;
+							background: url(../img/sprite_mobile@2x.png) no-repeat;
+							background-position: -296px -285px;
+							background-size: 379px 340px;
+						}
+					}
+					.mobile-lnb-wrap {
+						display: none;
+						width: 100%;
+						background-color: #f5f5f5;
+						padding: 10px 0;
+						ul {
+							li {
+								&:last-child {
+									a {
+										border-bottom: none;
+									}
+								}
+								padding: 0 20px;
+								a {
+									display: block;
+									padding: 15px 0;
+									border-bottom: 1px solid #dbdbdb;
+								}
+							}
+						}
 					}
 				}
 			}
