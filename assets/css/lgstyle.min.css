@@ -21,6 +21,7 @@
   z-index: 3;
   position: fixed;
   width: 100%;
+  border-bottom: 1px solid #000;
 }
 #header .header {
   display: flex;
@@ -199,9 +200,6 @@
 #header .header .translate-box ul li {
   position: relative;
 }
-#header .header .translate-box ul li:nth-child(1) {
-  padding-right: 20px;
-}
 #header .header .translate-box ul li:nth-child(1)::after {
   display: block;
   content: "";
@@ -226,21 +224,29 @@
     padding: 0;
   }
 }
+#header .header .translate-box ul li .btn-wrap {
+  padding-right: 20px;
+}
 #header .header .translate-box ul li .btn-wrap.on {
   border: 1px solid #dbdbdb;
-  padding: 10px;
 }
 #header .header .translate-box ul li .btn-wrap.on .eng {
   display: block;
 }
+#header .header .translate-box ul li .btn-wrap.on .language.kor::after {
+  background-position: -383px -388px;
+}
 #header .header .translate-box ul li .btn-wrap .language {
   display: block;
+  position: relative;
   font-size: 15px;
-  padding: 0;
+  padding: 10px;
+  padding-right: 0;
   background: transparent;
+  color: #000;
   cursor: pointer;
 }
-#header .header .translate-box ul li .btn-wrap .language::after {
+#header .header .translate-box ul li .btn-wrap .language.kor::after {
   display: inline-block;
   content: "";
   background: url(../img/sprite_pc.png) no-repeat;
@@ -250,12 +256,12 @@
   background-size: 461px 445px;
   margin-left: 5px;
 }
-#header .header .translate-box ul li .btn-wrap .eng {
+#header .header .translate-box ul li .btn-wrap .eng-wrap {
   display: none;
-  padding-top: 5px;
+  width: 100%;
 }
-#header .header .translate-box ul li .btn-wrap .eng::after {
-  display: none;
+#header .header .translate-box ul li .btn-wrap .eng-wrap .eng {
+  display: block;
 }
 #header .header .translate-box ul li .link-btn {
   display: block;
@@ -296,30 +302,25 @@
   position: relative;
 }
 #header .mobile-gnb-menu .top-logo-box .close-btn-box ul li:nth-child(1) {
-  padding-right: 10px;
   vertical-align: top;
 }
-#header .mobile-gnb-menu .top-logo-box .close-btn-box ul li:nth-child(1)::after {
-  display: block;
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 20px;
-  background: #dbdbdb;
+#header .mobile-gnb-menu .top-logo-box .close-btn-box ul li:nth-child(1) .btn-wrap {
+  height: 60px;
 }
-#header .mobile-gnb-menu .top-logo-box .close-btn-box ul li:nth-child(2) {
-  padding-left: 10px;
+#header .mobile-gnb-menu .top-logo-box .close-btn-box ul li:nth-child(1) .btn-wrap .eng-wrap {
+  display: none;
 }
-#header .mobile-gnb-menu .top-logo-box .close-btn-box ul li .m-language {
+#header .mobile-gnb-menu .top-logo-box .close-btn-box ul li:nth-child(1) .btn-wrap.on {
+  border: 1px solid #ddd;
+}
+#header .mobile-gnb-menu .top-logo-box .close-btn-box ul li:nth-child(1) .m-language {
   background: transparent;
+  padding: 7px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
 }
-#header .mobile-gnb-menu .top-logo-box .close-btn-box ul li .m-language::after {
+#header .mobile-gnb-menu .top-logo-box .close-btn-box ul li:nth-child(1) .m-language.kor::after {
   display: inline-block;
   content: "";
   background: url(../img/sprite_mobile@2x.png) no-repeat;
@@ -328,6 +329,26 @@
   background-position: -156px -324px;
   background-size: 379px 340px;
   margin-left: 8px;
+}
+#header .mobile-gnb-menu .top-logo-box .close-btn-box ul li:nth-child(1) .m-language.eng {
+  padding-top: 0;
+  display: block;
+  text-align: left;
+}
+#header .mobile-gnb-menu .top-logo-box .close-btn-box ul li:nth-child(2) {
+  margin-top: 7px;
+  padding-left: 10px;
+}
+#header .mobile-gnb-menu .top-logo-box .close-btn-box ul li:nth-child(2)::before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 20px;
+  background: #dbdbdb;
 }
 #header .mobile-gnb-menu .top-logo-box .close-btn-box ul li .mgnb-closeBtn {
   display: block;
@@ -341,7 +362,7 @@
 #header .mobile-gnb-menu .top-logo-box .mobile-logo-box {
   width: 100%;
   text-align: center;
-  margin: 20px 0 30px 0;
+  margin-bottom: 30px;
 }
 #header .mobile-gnb-menu .top-logo-box .mobile-logo-box .mGnb-logo {
   display: block;

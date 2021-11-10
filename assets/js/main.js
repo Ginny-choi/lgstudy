@@ -8,7 +8,7 @@ $(document).ready(function () {
 	const mobileGnbBtn = $(".mobile-gnbBtn");
 	const mgnbCloseBtn = $(".mgnb-closeBtn");
 
-	const languageBtn = $(".language.kor");
+	const languageBtn = $(".langBtn");
 	const btnWrap = $(".btn-wrap");
 
 	mainGnb.on({
@@ -47,6 +47,7 @@ $(document).ready(function () {
 
 	languageBtn.on({
 		click: function () {
+			$(this).next().slideToggle(200);
 			btnWrap.toggleClass("on");
 		},
 	});
