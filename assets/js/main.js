@@ -78,9 +78,9 @@ $(document).ready(function () {
 	///미디어
 
 	var swiper = new Swiper(".swiper", {
-		slidesPerView: 4,
-		spaceBetween: 30,
-		slidesPerGroup: 3,
+		slidesPerView: 2,
+		spaceBetween: 20,
+		slidesPerGroup: 2,
 		loop: true,
 		loopFillGroupWithBlank: true,
 		pagination: {
@@ -90,6 +90,13 @@ $(document).ready(function () {
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {
+			1025: {
+				slidesPerView: 4,
+				spaceBetween: 20,
+				slidesPerGroup: 4,
+			},
 		},
 	});
 });

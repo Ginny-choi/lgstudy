@@ -473,6 +473,9 @@
   background-image: url(../img/mainimg4.jpg);
 }
 
+#media-section {
+  padding: 100px 0;
+}
 #media-section .media-content {
   max-width: 1200px;
   width: 100%;
@@ -499,8 +502,8 @@
   background: #bb0841;
 }
 #media-section .media-content .top-media-box {
-  width: 900px;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 #media-section .media-content .top-media-box ul {
   width: 100%;
@@ -518,9 +521,71 @@
   display: block;
   width: 100%;
 }
+#media-section .media-content .bottom-news-box {
+  position: relative;
+}
 #media-section .media-content .bottom-news-box .news-wrap {
-  width: 900px;
+  display: flex;
+  width: 300%;
+  justify-content: space-between;
+}
+#media-section .media-content .bottom-news-box .news-wrap li {
+  width: 285px;
+  margin-right: 20px;
+  border: 1px solid #dbdbdb;
+}
+#media-section .media-content .bottom-news-box .news-wrap li:nth-child(4n) {
+  margin-right: 0;
 }
 #media-section .media-content .bottom-news-box .news-wrap li a {
   display: block;
+}
+#media-section .media-content .bottom-news-box .news-wrap li a .news-img {
+  width: 100%;
+}
+#media-section .media-content .bottom-news-box .news-wrap li a .news-img img {
+  display: block;
+  width: 100%;
+}
+#media-section .media-content .bottom-news-box .news-wrap li a .news-text {
+  width: 100%;
+  height: 140px;
+  padding: 25px;
+}
+#media-section .media-content .bottom-news-box .news-wrap li a .news-text h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #bb0841;
+}
+#media-section .media-content .bottom-news-box .news-wrap li a .news-text p {
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  margin: 0;
+  padding-top: 15px;
+}
+#media-section .media-content .bottom-news-box .swiper-button-prev.custom {
+  left: -50px;
+}
+@media all and (max-width: 1025px) {
+  #media-section .media-content .bottom-news-box .swiper-button-prev.custom {
+    left: 0;
+  }
+}
+#media-section .media-content .bottom-news-box .swiper-button-next.custom {
+  right: -50px;
+}
+@media all and (max-width: 1025px) {
+  #media-section .media-content .bottom-news-box .swiper-button-next.custom {
+    right: 0;
+  }
+}
+#media-section .media-content .bottom-news-box .swiper-pagination.custom {
+  bottom: -30px;
 }/*# sourceMappingURL=lgstyle.min.css.map */
