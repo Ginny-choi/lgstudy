@@ -476,6 +476,11 @@
 #media-section {
   padding: 100px 0;
 }
+@media all and (max-width: 920px) {
+  #media-section {
+    padding: 10.8695652vw 0;
+  }
+}
 @media all and (max-width: 1025px) {
   #media-section .container {
     padding: 0 30px;
@@ -494,6 +499,17 @@
   font-size: 60px;
   color: #000;
   position: relative;
+  margin-top: 0;
+}
+@media all and (max-width: 768px) {
+  #media-section .media-content .title-box h2 {
+    font-size: 50px;
+  }
+}
+@media all and (max-width: 576px) {
+  #media-section .media-content .title-box h2 {
+    font-size: 40px;
+  }
 }
 #media-section .media-content .title-box h2::after {
   display: block;
@@ -571,7 +587,17 @@
 @media all and (max-width: 1025px) {
   #media-section .media-content .bottom-news-box .news-wrap li a .news-text {
     padding: 5.29%;
-    height: 2.96%;
+  }
+}
+@media all and (max-width: 920px) {
+  #media-section .media-content .bottom-news-box .news-wrap li a .news-text {
+    height: 120px;
+  }
+}
+@media all and (max-width: 576px) {
+  #media-section .media-content .bottom-news-box .news-wrap li a .news-text {
+    height: 100px;
+    padding: 12px;
   }
 }
 #media-section .media-content .bottom-news-box .news-wrap li a .news-text h3 {
@@ -601,6 +627,13 @@
 @media all and (max-width: 920px) {
   #media-section .media-content .bottom-news-box .news-wrap li a .news-text p {
     font-size: 16px;
+    height: 50px;
+  }
+}
+@media all and (max-width: 576px) {
+  #media-section .media-content .bottom-news-box .news-wrap li a .news-text p {
+    font-size: 13px;
+    height: auto;
   }
 }
 #media-section .media-content .bottom-news-box .swiper-button-prev.custom {
