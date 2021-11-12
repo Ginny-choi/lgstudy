@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	const $window = $(window);
 	//헤더 메뉴
 	const gnbNav = $(".gnb-nav");
 	const mobileGnbMenu = $(".mobile-gnb-menu");
@@ -77,7 +78,7 @@ $(document).ready(function () {
 
 	///미디어
 
-	var swiper = new Swiper(".swiper", {
+	var swiper = new Swiper(".newsSwiper", {
 		slidesPerView: 2,
 		spaceBetween: 20,
 		slidesPerGroup: 2,
@@ -99,4 +100,40 @@ $(document).ready(function () {
 			},
 		},
 	});
+
+	//crs
+	var swiper = new Swiper(".csrSwiper", {
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		keyboard: {
+			enabled: true,
+		},
+		pagination: {
+			el: ".swiper-pagination2",
+			clickable: true,
+		},
+		breakpoints: {
+			1025: {
+				slidesPerView: 4,
+				spaceBetween: 10,
+			},
+		},
+	});
+
+	function imgHeight() {
+		const csrListBox = $(".csr-list-box");
+		const csrBg = $(".csr-bg");
+		let csrBgW = csrBg.innerWidth();
+		let csrBgH = csrBgW * 0.618261826;
+
+		csrListBox.css({ height: csrBgH });
+	}
+	function resizeFn() {
+		$window.resize(function () {
+			if ($window.innerWidth() < 1025) {
+				imgHeight();
+			}
+		});
+	}
+	setTimeout(resizeFn, 500);
 });
