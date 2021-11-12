@@ -29,3 +29,11 @@
     -   옵션을 잘 검색하고 활용해야겠다 🤦‍♀️
 
 -   뉴스 영역 반응형 높이 다시 잡기
+
+---
+
+11/12
+
+-   포커싱이 되는 요소안에 또 다른 포커싱 요소를 못 넣는다
+    ex) a 안에 a, input, select, button 등 못 넣음
+    -   포커싱 되는 요소 : a input button select textarea
