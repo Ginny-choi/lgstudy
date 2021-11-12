@@ -15,6 +15,8 @@ $(document).ready(function () {
 	//메인 이미지 화면
 	const mainImg = $(".mainImg");
 	let cnt = 0;
+	//csr 화면
+	const csrListBox = $(".csr-list-box");
 
 	mainGnb.on({
 		mouseenter: function () {
@@ -61,7 +63,7 @@ $(document).ready(function () {
 	function nextSlide() {
 		mainImg.css({ zIndex: 1 });
 		mainImg.eq(cnt == 0 ? 3 : cnt - 1).css({ zIndex: 3 });
-		mainImg.eq(cnt).css({ zIndex: 4 }).stop().animate({ opacity: 0 }, 0).animate({ opacity: 1 }, 1000);
+		mainImg.eq(cnt).css({ zIndex: 4, opacity: 0 }).stop().animate({ opacity: 1 }, 1000);
 	}
 	function countFn() {
 		cnt++;
@@ -102,7 +104,7 @@ $(document).ready(function () {
 	});
 
 	//crs
-	var swiper = new Swiper(".csrSwiper", {
+	var swiperCSR = new Swiper(".csrSwiper", {
 		slidesPerView: 1,
 		slidesPerGroup: 1,
 		keyboard: {
@@ -120,19 +122,21 @@ $(document).ready(function () {
 		},
 	});
 
-	function imgHeight() {
-		const csrListBox = $(".csr-list-box");
+	function csrimgHeight() {
 		const csrBg = $(".csr-bg");
 		let csrBgW = csrBg.innerWidth();
 		let csrBgH = csrBgW * 0.618261826;
 
-		csrListBox.css({ height: csrBgH });
+		if ($window.innerWidth() < 1025) {
+			csrListBox.css({ height: csrBgH });
+		} else if ($window.innerWidth() >= 1025) {
+			csrListBox.removeAttr("style");
+		}
 	}
+	csrimgHeight();
 	function resizeFn() {
 		$window.resize(function () {
-			if ($window.innerWidth() < 1025) {
-				imgHeight();
-			}
+			csrimgHeight();
 		});
 	}
 	setTimeout(resizeFn, 500);

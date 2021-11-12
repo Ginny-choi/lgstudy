@@ -575,10 +575,15 @@
 }
 #media-section .media-content .bottom-news-box .news-wrap li a .news-img {
   width: 100%;
+  overflow: hidden;
+}
+#media-section .media-content .bottom-news-box .news-wrap li a .news-img:hover img {
+  transform: scale(1.2);
 }
 #media-section .media-content .bottom-news-box .news-wrap li a .news-img img {
   display: block;
   width: 100%;
+  transition: transform 0.9s;
 }
 #media-section .media-content .bottom-news-box .news-wrap li a .news-text {
   width: 100%;
@@ -789,7 +794,7 @@
     height: 13.6585366vw;
   }
 }
-#csr-section .csrSection .csr-list-box ul li .csr-bg .fake-btn {
+#csr-section .csrSection .csr-list-box ul li .csr-bg .content-box .fake-btn {
   display: inline-block;
   text-align: center;
   padding: 5px 10px;
@@ -799,7 +804,7 @@
   transition: all 0.3s;
 }
 @media all and (max-width: 1025px) {
-  #csr-section .csrSection .csr-list-box ul li .csr-bg .fake-btn {
+  #csr-section .csrSection .csr-list-box ul li .csr-bg .content-box .fake-btn {
     font-size: 3.804878vw;
     padding: 1.9512195vw;
   }
@@ -808,4 +813,41 @@
   width: 100%;
   text-align: center;
   margin-top: 10px;
+}
+
+#goSite-section .goSite-section {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+#goSite-section .site-box-wrap {
+  width: 100%;
+}
+#goSite-section .site-box-wrap .site-container {
+  height: 530px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+#goSite-section .site-box-wrap .site-container .site-box.sciencePark {
+  grid-column: 1/3;
+}
+#goSite-section .site-box-wrap .site-container .site-box.recruit {
+  grid-column: 3/5;
+}
+#goSite-section .site-box-wrap .site-container .site-box a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#goSite-section .site-box-wrap .site-container .site-box a img {
+  display: block;
+  width: 100%;
+}
+#goSite-section .site-box-wrap .site-container .site-box a .site-desc {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
 }/*# sourceMappingURL=lgstyle.min.css.map */
